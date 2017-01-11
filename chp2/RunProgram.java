@@ -3,35 +3,50 @@ package chp2;
 public class RunProgram {
 
 	public static void main(String[] args) {
-		Car c = new Car();
-		c.colour = "Blue";
-		c.currentSpeed = 0;
-		c.gasDistance = 500;
-		c.noOfDoors = 5;
-		c.totalKMDriven = 100;
+		//Create first car object
+		Car firstCar = new Car();
+		//Set the state (instance variable) of the first car object.
+		firstCar.colour = "Blue";
+		firstCar.currentSpeed = 0;
+		firstCar.gasDistance = 500;
+		firstCar.noOfDoors = 5;
+		firstCar.totalKMDriven = 100;
+		//Print the first car current speed.
 		System.out.println("Initial Speed");
-		System.out.println(c.currentSpeed);
-		
+		System.out.println(firstCar.currentSpeed);
+		//Press the accelerator and print first car current speed.
 		System.out.println("Pressing the Accelerator Pedal");
-		c.pressAccelerator();
-		System.out.println(c.currentSpeed);
-		
+		firstCar.pressAccelerator();
+		System.out.println(firstCar.currentSpeed);
+		//Press the accelerator again and print first car current speed.
 		System.out.println("Pressing the Accelerator Pedal");
-		c.pressAccelerator();
-		System.out.println(c.currentSpeed);
+		firstCar.pressAccelerator();
+		System.out.println(firstCar.currentSpeed);
 		
-		Car c1 = new Car();
-		c1.colour = "White";
-		c1.currentSpeed = 0;
-		c1.gasDistance = 200;
-		c1.noOfDoors = 5;
-		c1.totalKMDriven = 10000;
-		System.out.println("Initial Speed c1");
-		System.out.println(c1.currentSpeed);
-		
-		System.out.println("Pressing the Accelerator Pedal c1");
-		c1.pressAccelerator();
-		System.out.println(c1.currentSpeed);
+		//Create second car object
+		Car secondCar = new Car();
+		//Set the state (instance variable) of the second car object
+		secondCar.colour = "White";
+		secondCar.currentSpeed = 0;
+		secondCar.gasDistance = 200;
+		secondCar.noOfDoors = 5;
+		secondCar.totalKMDriven = 10000;
+		//Print the second car current speed.
+		System.out.println("Initial Speed secondCar");
+		System.out.println(secondCar.currentSpeed);
+		//Press the accelerator and print second car current speed.
+		System.out.println("Pressing the Accelerator Pedal secondCar");
+		secondCar.pressAccelerator();
+		System.out.println(secondCar.currentSpeed);
+		//Printing initial value of Class Variable (noOfCarsCreated)
+		System.out.println("Initial Value for noOfCarsCreated");
+		System.out.println(firstCar.noOfCarsCreated);
+		//Change value of the class variable through first car object.
+		firstCar.noOfCarsCreated = 2;
+		//Both object have the same noOfCarsCreated value.
+		System.out.println("Current Value for noOfCarsCreated");
+		System.out.println("For firstCar: " + firstCar.noOfCarsCreated);
+		System.out.println("For secondCar: " + secondCar.noOfCarsCreated);
 	}
 	
 }
