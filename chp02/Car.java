@@ -1,4 +1,4 @@
-package chp2;
+package chp02;
 
 public class Car {
 	//Instance Variable
