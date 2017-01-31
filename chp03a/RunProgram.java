@@ -13,6 +13,8 @@ public class RunProgram {
 		System.out.println(anim.eat("Ayam"));
 		System.out.println(anim.sleep());
 		System.out.println(anim.makeNoise("Noise"));
+		anim.setAge(100);
+		System.out.println(anim.getAge());
 	}
 
 }

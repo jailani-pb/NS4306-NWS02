@@ -13,7 +13,7 @@ public abstract class Feline extends Animal {
 
 	@Override
 	public String sleep() {
-		if(hunger) {
+		if(this.isHunger()) {
 			return "Feline: I cannot sleep";
 		} else {
 			return "Feline: I sleep";

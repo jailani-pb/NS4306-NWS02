@@ -13,7 +13,7 @@ public class Lion extends Feline implements Pet {
 
 	@Override
 	public String play() {
-		if(hunger) {
+		if(this.isHunger()) {
 			return "Lion: I am hungry, I better eat you";
 		} else {
 			return "Lion: Lets play";
@@ -22,7 +22,7 @@ public class Lion extends Feline implements Pet {
 
 	@Override
 	public String beFriendly() {
-		if(hunger) {
+		if(this.isHunger()) {
 			return "Lion: I am hungry, I better eat you";
 		} else {
 			return "Lion: Pet me";

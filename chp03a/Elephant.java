@@ -8,7 +8,7 @@ public class Elephant extends Animal {
 
 	@Override
 	public String eat(String food) {
-		if(favouriteFood.equals(food)) {
+		if(this.getFavouriteFood().equals(food)) {
 			return "Elephant: Nyaman tu " + food;
 		} else {
 			return "Elephant: Inda ku pandai " + food;
