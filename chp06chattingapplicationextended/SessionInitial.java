@@ -44,6 +44,7 @@ public class SessionInitial implements Runnable {
 	}
 	
 	public void sendWelcomeMessage() throws IOException {
+		//(1)
 		toClient.writeUTF("Welcome to PB Chatting");
 		toClient.flush();
 	}

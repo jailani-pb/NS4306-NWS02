@@ -84,6 +84,7 @@ public class ChatClient {
 	}
 	
 	public static void readWelcomeMessage() throws IOException {
+		//(1)
 		System.out.println(fromServer.readUTF());
 	}
 	
