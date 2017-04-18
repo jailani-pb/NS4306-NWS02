@@ -56,7 +56,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="row" style="padding-bottom: 20px;">
-                    <form class="form-horizontal" action="search.html" method="get">
+                    <form class="form-horizontal" action="/search" method="get">
                         <div class="col-sm-2 col-lg-2 col-md-2">
                             <button class="btn btn-default btn-block" type="submit">Search</button>
                         </div>
@@ -67,33 +67,22 @@
                     </form>
                 </div>
                 <div class="row">
-                    <div class="col-sm-4 col-lg-4 col-md-4">
+                    <div class="col-sm-4 col-lg-4 col-md-4" th:each="product : ${ products }">
                         <div class="thumbnail">
-                            <img src="http://placehold.it/360x170" alt="">
+                            <!-- TODO -->
+                            <!-- Slide #32 Example Data to Thymeleaf Templates -->
+                            <img th:src="@{ '/images/' + ${ product.picFile } }" alt="">
                             <div class="caption">
-                                <a href="product.html"><h4>First Product</h4></a>
-                                <h4>$24.99</h4>
+                                <!-- TODO -->
+                                <!-- Slide #32 Example Data to Thymeleaf Templates -->
+                                <!-- Slide #51 Example Dynamic Page (cont.) -->
+                                <a th:href="@{ '/product/' + ${ product.name } }"><h4 th:text="${ product.name }"></h4></a>
+                                <!-- TODO -->
+                                <!-- Slide #32 Example Data to Thymeleaf Templates -->
+                                <h4 th:text="${ product.price }"></h4>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="http://placehold.it/360x170" alt="">
-                            <div class="caption">
-                                <a href="product.html"><h4>Second Product</h4></a>
-                                <h4>$14.99</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="http://placehold.it/360x170" alt="">
-                            <div class="caption">
-                                <a href="product.html"><h4>Third Product</h4></a>
-                                <h4>$54.99</h4>
-                            </div>
-                        </div>
-                    </div>
+                    </div> 
                 </div>
             </div>
         </div>
